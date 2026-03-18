@@ -39,6 +39,7 @@ import WorkspaceApiKeys from "@/ee/api-key/pages/workspace-api-keys";
 import AiSettings from "@/ee/ai/pages/ai-settings.tsx";
 import AuditLogs from "@/ee/audit/pages/audit-logs.tsx";
 import VerifyEmail from "@/ee/pages/verify-email.tsx";
+import SpaceAgent from "@/pages/space/space-agent.tsx";
 
 export default function App() {
   const { t } = useTranslation();
@@ -83,6 +84,7 @@ export default function App() {
           <Route path={"/home"} element={<Home />} />
           <Route path={"/spaces"} element={<SpacesPage />} />
           <Route path={"/s/:spaceSlug"} element={<SpaceHome />} />
+          <Route path={"/s/:spaceSlug/agent"} element={<SpaceAgent />} />
           <Route path={"/s/:spaceSlug/trash"} element={<SpaceTrash />} />
           <Route
             path={"/s/:spaceSlug/p/:pageSlug"}

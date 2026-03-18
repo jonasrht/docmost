@@ -104,7 +104,7 @@ export class EnvironmentVariables {
 
   @IsOptional()
   @ValidateIf((obj) => obj.AI_DRIVER)
-  @IsIn(['openai', 'openai-compatible', 'gemini', 'ollama'])
+  @IsIn(['openai', 'openai-compatible', 'gemini', 'ollama', 'openrouter'])
   @IsString()
   AI_DRIVER: string;
 
@@ -125,11 +125,23 @@ export class EnvironmentVariables {
   @IsOptional()
   @ValidateIf(
     (obj) =>
-      obj.AI_DRIVER && ['openai', 'openai-compatible'].includes(obj.AI_DRIVER),
+      obj.AI_DRIVER &&
+      ['openai', 'openai-compatible'].includes(obj.AI_DRIVER) &&
+      !obj.OPENROUTER_API_KEY,
   )
   @IsString()
   @IsNotEmpty()
   OPENAI_API_KEY: string;
+
+  @IsOptional()
+  @ValidateIf(
+    (obj) =>
+      obj.AI_DRIVER === 'openrouter' ||
+      (obj.AI_DRIVER && ['openai', 'openai-compatible'].includes(obj.AI_DRIVER) && obj.OPENROUTER_API_KEY),
+  )
+  @IsString()
+  @IsNotEmpty()
+  OPENROUTER_API_KEY: string;
 
   @IsOptional()
   @ValidateIf(

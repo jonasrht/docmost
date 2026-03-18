@@ -244,12 +244,12 @@ export class EnvironmentService {
     return this.configService.get<string>('AI_DRIVER');
   }
 
-  getAiEmbeddingModel(): string {
-    return this.configService.get<string>('AI_EMBEDDING_MODEL');
+  getAiCompletionModel(): string {
+    return this.configService.get<string>('AI_COMPLETION_MODEL', 'anthropic/claude-3.5-sonnet');
   }
 
-  getAiCompletionModel(): string {
-    return this.configService.get<string>('AI_COMPLETION_MODEL');
+  getAiEmbeddingModel(): string {
+    return this.configService.get<string>('AI_EMBEDDING_MODEL');
   }
 
   getAiEmbeddingDimension(): number {
@@ -269,6 +269,10 @@ export class EnvironmentService {
 
   getGeminiApiKey(): string {
     return this.configService.get<string>('GEMINI_API_KEY');
+  }
+
+  getOpenRouterApiKey(): string {
+    return this.configService.get<string>('OPENROUTER_API_KEY');
   }
 
   getOllamaApiUrl(): string {

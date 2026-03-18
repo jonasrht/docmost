@@ -12,6 +12,7 @@ import {
   IconFileExport,
   IconHome,
   IconPlus,
+  IconRobot,
   IconSearch,
   IconSettings,
   IconTrash,
@@ -114,6 +115,26 @@ export function SpaceSidebar() {
                   stroke={2}
                 />
                 <span>{t("Search")}</span>
+              </div>
+            </UnstyledButton>
+
+            <UnstyledButton
+              component={Link}
+              to={`/s/${spaceSlug}/agent`}
+              className={clsx(
+                classes.menu,
+                location.pathname.startsWith(`/s/${spaceSlug}/agent`)
+                  ? classes.activeButton
+                  : "",
+              )}
+            >
+              <div className={classes.menuItemInner}>
+                <IconRobot
+                  size={18}
+                  className={classes.menuItemIcon}
+                  stroke={2}
+                />
+                <span>{t("Agent")}</span>
               </div>
             </UnstyledButton>
 

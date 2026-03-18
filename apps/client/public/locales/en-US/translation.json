@@ -1,5 +1,7 @@
 {
   "Account": "Account",
+  "Agent": "Agent",
+  "AI Agent": "AI Agent",
   "Active": "Active",
   "Add": "Add",
   "Add group members": "Add group members",
@@ -13,6 +15,7 @@
   "Are you sure you want to remove this user from the group? The user will lose access to resources this group has access to.": "Are you sure you want to remove this user from the group? The user will lose access to resources this group has access to.",
   "Are you sure you want to remove this user from the space? The user will lose all access to this space.": "Are you sure you want to remove this user from the space? The user will lose all access to this space.",
   "Are you sure you want to restore this version? Any changes not versioned will be lost.": "Are you sure you want to restore this version? Any changes not versioned will be lost.",
+  "Ask me anything about your workspace...": "Ask me anything about your workspace...",
   "Can become members of groups and spaces in workspace": "Can become members of groups and spaces in workspace",
   "Can create and edit pages in space.": "Can create and edit pages in space.",
   "Can edit": "Can edit",
@@ -561,6 +564,7 @@
   "Find a space": "Find a space",
   "Search in all your spaces": "Search in all your spaces",
   "Type": "Type",
+  "Type your message...": "Type your message...",
   "Enterprise": "Enterprise",
   "Download attachment": "Download attachment",
   "Allowed email domains": "Allowed email domains",
